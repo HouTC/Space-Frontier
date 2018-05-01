@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A1A5C498-42B9-E4E8-67C7-93B4E90BDDCE}</ProjectGuid>
+    <ProjectGuid>{CBCCAEB0-9CEC-8226-2C88-F22156C9E935}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>WebGL:20</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -288,13 +288,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_MyScripts\DestroyByContact.cs" />
-    <Compile Include="Assets\_MyScripts\DestroyByTime.cs" />
-    <Compile Include="Assets\_MyScripts\GameController.cs" />
-    <Compile Include="Assets\_MyScripts\HealthLevel.cs" />
-    <Compile Include="Assets\_MyScripts\Mover.cs" />
-    <Compile Include="Assets\_MyScripts\PlayerController.cs" />
-    <Compile Include="Assets\_MyScripts\RandomRotator.cs" />
+    <ProjectReference Include="Space Frontier.csproj">
+      <Project>{A1A5C498-42B9-E4E8-67C7-93B4E90BDDCE}</Project>
+      <Name>Space Frontier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Editor\HealthLevelTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

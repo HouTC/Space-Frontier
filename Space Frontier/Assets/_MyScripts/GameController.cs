@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject hazard;
+    public GameObject asteroid;
     public Vector3 asteroidPosition;
-    public int hazardCount;
 
     //It is used to set the preparation time to start generating obstacles
     public float startWait;
 
     //It is used to set the interval for each obstacle to be generated
-    public float spawnWait;
-    public float waveWait;
+    public float asteroidWait;
 
     public Text gameOverText;
     private bool gameOver;
@@ -31,16 +29,14 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (true)
         {
-            for (int i = 0; i < hazardCount; i++)
-            {
-                //It is used to record where the obstacle was generated
-                Vector3 spawnPosition = new Vector3(Random.Range(-asteroidPosition.x, asteroidPosition.x), asteroidPosition.y, asteroidPosition.z);
+            
+                //It is used to record where the asteroid was generated
+                Vector3 randomAsteroidPosition = new Vector3(Random.Range(-asteroidPosition.x, asteroidPosition.x), asteroidPosition.y, asteroidPosition.z);
 
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
+                Quaternion asteroidRotation = Quaternion.identity;
+                Instantiate(asteroid, randomAsteroidPosition, asteroidRotation);
+                yield return new WaitForSeconds(asteroidWait);
+
         }
     }
 

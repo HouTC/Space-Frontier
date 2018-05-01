@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class Boundary
 {
-    public float xMin, xMax, zMin, zMax;
+    public float left, right, bottom, top;
 }
 
 public class PlayerController : MonoBehaviour {
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("Fire1") && Time.time > nextShot)
+        if (Time.time > nextShot)
         {
             nextShot = Time.time + shootingRate;
             Instantiate(shot, shotPoint.position, shotPoint.rotation);
@@ -35,17 +35,17 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float movementHori = Input.GetAxis("Horizontal");
+        float movementVerti = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3(movementHori, 0.0f, movementVerti);
         GetComponent<Rigidbody>().velocity = movement * shipSpeed;
 
         GetComponent<Rigidbody>().position = new Vector3
         (
-            Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax),
+            Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.left, boundary.right),
             0.0f,
-            Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
+            Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.bottom, boundary.top)
         );
     }
 }
