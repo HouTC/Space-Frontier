@@ -24,12 +24,6 @@ public class DestroyByContact : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        //if asteroid collide with boundary, no explosion
-        if (other.tag == "Boundary")
-        {
-            return;
-        }
-
         Instantiate(explosion, transform.position, transform.rotation);
 
         Destroy(other.gameObject);
