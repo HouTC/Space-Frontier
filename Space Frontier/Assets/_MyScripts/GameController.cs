@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public float asteroidWait;
 
     public Text gameOverText;
-    private bool gameOver;
+    public bool gameOver = false;
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverText.text = "Game Over!";
+        gameOverText.text = "Game over!";
         gameOver = true;
     }
 }
