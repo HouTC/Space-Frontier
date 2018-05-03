@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public float shipSpeed;
     public Boundary boundary;
 
+
     public float shootingRate;
     private float nextShot;
     public GameObject shot;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour {
         {
             nextShot = Time.time + shootingRate;
             Instantiate(shot, shotPoint.position, shotPoint.rotation);
+			GetComponent<AudioSource> ().Play ();
         }
 
     }
@@ -47,5 +49,8 @@ public class PlayerController : MonoBehaviour {
             0.0f,
             Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.bottom, boundary.top)
         );
+
+
+
     }
 }
