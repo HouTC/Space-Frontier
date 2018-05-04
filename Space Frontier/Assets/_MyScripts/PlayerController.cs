@@ -11,6 +11,7 @@ public class Boundary
 
 public class PlayerController : MonoBehaviour {
     public float shipSpeed;
+    public float shipRotation;
     public Boundary boundary;
 
 
@@ -43,14 +44,13 @@ public class PlayerController : MonoBehaviour {
         Vector3 movement = new Vector3(movementHori, 0.0f, movementVerti);
         GetComponent<Rigidbody>().velocity = movement * shipSpeed;
 
+        GetComponent<Rigidbody>().rotation = Quaternion.Euler(GetComponent<Rigidbody>().velocity.x * -shipRotation + 89.50f, 89.99f, 89.99f);
+
         GetComponent<Rigidbody>().position = new Vector3
         (
             Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.left, boundary.right),
             0.0f,
             Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.bottom, boundary.top)
         );
-
-
-
     }
 }
