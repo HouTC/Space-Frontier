@@ -59,6 +59,7 @@
      <Compile Include="Assets\_MyScripts\Mover.cs" />
      <Compile Include="Assets\_MyScripts\PlayerController.cs" />
      <Compile Include="Assets\_MyScripts\RandomRotator.cs" />
+     <Compile Include="Assets\_MyScripts\SoundButton.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
