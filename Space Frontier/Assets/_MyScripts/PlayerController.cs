@@ -12,6 +12,7 @@ public class Boundary
 }
 
 public class PlayerController : MonoBehaviour {
+	
     public float shipSpeed;
     public float shipRotation;
     public Boundary boundary;
@@ -21,6 +22,13 @@ public class PlayerController : MonoBehaviour {
     public GameObject shot;
     //shotPoint variable is the position of gun muzzle
     public Transform shotPoint;
+	//bool alive, to show the buttons when the player is dead
+	public bool alive;
+
+	void Start()
+	{
+		alive = true;
+	}
 	
 	// Update is called once per frame
 	void Update () {
