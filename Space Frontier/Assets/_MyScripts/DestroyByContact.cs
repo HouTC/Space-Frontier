@@ -46,8 +46,10 @@ public class DestroyByContact : MonoBehaviour
             //end the game and destroy player's ship when health is below 0
             if (healthLevel.currentHealth <= 0)
             {
+				other.gameObject.GetComponent<PlayerController> ().alive = false; //Buttons to show up, restart and mainmenu
                 Destroy(other.gameObject);
                 gameController.GameOver();
+				Time.timeScale = 0; //The asteroids will stop spawning
             }
         }
 
