@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject asteroid;
+    public GameObject asteroid = null;
     //asteroidPosition is used to set the position where the obstacle was generated
     public Vector3 asteroidPosition;
     //startWait is used to set the preparation time to start generating obstacles
