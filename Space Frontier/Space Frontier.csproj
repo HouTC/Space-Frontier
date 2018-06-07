@@ -292,6 +292,7 @@
     <Compile Include="Assets\_MyScripts\DestroyByTime.cs" />
     <Compile Include="Assets\_MyScripts\GameController.cs" />
     <Compile Include="Assets\_MyScripts\HealthLevel.cs" />
+    <Compile Include="Assets\_MyScripts\MenuController.cs" />
     <Compile Include="Assets\_MyScripts\Mover.cs" />
     <Compile Include="Assets\_MyScripts\PlayerController.cs" />
     <Compile Include="Assets\_MyScripts\RandomRotator.cs" />
