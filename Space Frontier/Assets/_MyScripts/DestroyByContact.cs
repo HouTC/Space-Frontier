@@ -7,6 +7,7 @@ public class DestroyByContact : MonoBehaviour
     public GameObject explosion;
     private GameController gameController;
     private HealthLevel healthLevel;
+	public int scoreValue;
 
     //Use this for initialization
     void Start()
@@ -59,5 +60,7 @@ public class DestroyByContact : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+		
+		gameController.AddScore(scoreValue);//Adds score once object is hit
     }
 }

@@ -19,10 +19,14 @@ public class GameController : MonoBehaviour
     GameObject[] pauseObjects;
     GameObject[] finishObjects;
     PlayerController playerController;
+	public UnityEngine.UI.Text scoreText;
+	private int score; 
 
     void Start()
     {
         StartCoroutine (Waves ());
+		score = 0;
+		UpdateScore();
 
         //No text should appear at the beginning of the game
         gameOverText.text = "";
@@ -77,6 +81,23 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(asteroidWait);
         }
     }
+	
+	 //This method handles the adding of the score
+	public void AddScore(int newScore)
+	{
+		
+		score+= newScore;
+		UpdateScore();
+		
+	}
+	
+	//This method, once called, updates the score on game screen
+	public void UpdateScore()
+	{
+	
+	 scoreText.text = "Score: " + score;
+	
+	}
 
     public void ButtonPause ()
     {
