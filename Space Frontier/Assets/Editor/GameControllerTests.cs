@@ -16,7 +16,7 @@ public class GameControllerTests : MonoBehaviour {
 
         gameController.GameOver();
 
-        Assert.AreEqual("Game over!", gameController.gameOverText.text);
+        Assert.AreEqual("Game Over!", gameController.gameOverText.text);
     }
 
     [Test]

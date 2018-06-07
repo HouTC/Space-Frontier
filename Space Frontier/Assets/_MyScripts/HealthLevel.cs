@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthLevel : MonoBehaviour {
 
-    public int currentHealth;
+    public int currentHealth = 15;
     public Text healthText;
 
     public void TakeDamage(int damage)

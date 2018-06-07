@@ -20,18 +20,18 @@ public class GameController : MonoBehaviour
     GameObject[] finishObjects;
     PlayerController playerController;
 	public UnityEngine.UI.Text scoreText;
-	private int score; 
+	private int score;
+    public int initialScore = 0;
+    public int tScale = 1;
 
     void Start()
     {
         StartCoroutine (Waves ());
-		score = 0;
+		score = initialScore;
 		UpdateScore();
-
         //No text should appear at the beginning of the game
         gameOverText.text = "";
-
-        Time.timeScale = 1;
+        Time.timeScale = tScale;
 
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");            //gets all objects with tag ShowOnPause
         finishObjects = GameObject.FindGameObjectsWithTag("ShowOnFinish");          //gets all objects with tag ShowOnFinish
