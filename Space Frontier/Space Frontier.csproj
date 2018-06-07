@@ -295,6 +295,7 @@
     <Compile Include="Assets\_MyScripts\Mover.cs" />
     <Compile Include="Assets\_MyScripts\PlayerController.cs" />
     <Compile Include="Assets\_MyScripts\RandomRotator.cs" />
+    <Compile Include="Assets\_MyScripts\SoundButton.cs" />
     <Compile Include="Assets\_MyScripts\UIManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
