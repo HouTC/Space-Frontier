@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Space Frontier",
+"dataUrl": "Sprint2_Web_Game.data.unityweb",
+"asmCodeUrl": "Sprint2_Web_Game.asm.code.unityweb",
+"asmMemoryUrl": "Sprint2_Web_Game.asm.memory.unityweb",
+"asmFrameworkUrl": "Sprint2_Web_Game.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
